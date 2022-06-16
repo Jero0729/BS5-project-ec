@@ -1,0 +1,37 @@
+// 法A
+//全部載入
+//變數修改區-開始
+
+//變數修改區-結束
+// @import '~bootstrap/scss/bootstrap';
+
+// 法B
+// 載入需要的
+
+@import '~bootstrap/scss/functions';
+//變數修改區-開始
+$btn-font-size:66px;
+$primary: pink;
+//變數修改區-結束
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+//類物件修改區-開始
+  //全部取代
+  // $theme-colors: (
+  //   'primary':#3c2b1a
+  // );
+
+  //新增
+  // $custom-colors: (
+  //   "c-primary": aqua,
+  // );
+  //合併
+  // $theme-colors:map-merge($theme-colors, $custom-colors);
+
+  // 刪除
+  $theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+//類物件修改區-結束
+
+@import '~bootstrap/scss/buttons';
